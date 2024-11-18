@@ -3,25 +3,25 @@ name: Hello world workflow
 on:
    push:
       branches:
-         - master
+       - master
    pull_request:
       branches:
-         - master
+       - master
    workflow_dispatch:
+
 
 jobs:
    hello:
-      runs-on: ubuntu:latest
+      runs-on: ubuntu-latest
       steps:
-      # Action checkout clone the checkout action repository, you can create your own actions
-         - uses: actions/checkout@v2  
-         - name: hello world
-            run: echo "Hello world"
-            shell: bash
+       - uses: actions/checkout@v2
+       - name: hello world
+         run: echo "Hello world"
+         shell: bash
    goodbye:
-      runs-on: ubuntu:latest
-         steps:
-            - name: goodbye world
-            run: echo "Goodbye world"
-            shell: bash
-            
+      runs-on: ubuntu-latest
+      steps:
+       - uses: actions/checkout@v2
+       - name: goodbye world
+         run: echo "Goodbye world"
+         shell: bash
